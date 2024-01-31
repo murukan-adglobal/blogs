@@ -19,7 +19,8 @@ class Blog extends CI_Controller
 	{
 		if(isset($_SESSION['adminid']) && $_SESSION['adminid']!='')
 		{
-			$this->load->view('admin/create_blog');
+			$data['blog_details']=array();
+			$this->load->view('admin/create_blog',$data);
 		}
 		else
 		{
@@ -183,6 +184,17 @@ class Blog extends CI_Controller
 		}
 
 		redirect('admin/dashboard');
+	}
+
+	public function edit_blog()
+	{
+		$data['blog_details']=array();
+	    $data['blog_details']=$this->blog->get_blog_details($_GET['id'])[0];
+
+	
+	  
+		  $this->load->view('admin/create_blog',$data);
+	   
 	}
 	
 }

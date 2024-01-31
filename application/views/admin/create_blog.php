@@ -88,16 +88,19 @@
   <div class="card-body">
   <form method="post" action="" enctype="multipart/form-data" id="blog_form">
             <!-- Title Input -->
+            
            
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" name="title" required>
+                <input type="text" class="form-control" id="title" <?php if(!empty($blog_details)){ ?> value="<?=$blog_details['title']?>" <?php }?> name="title" required>
             </div>
 
             <!-- Content Textarea -->
             <div class="mb-3">
                 <label for="content" class="form-label">Content</label>
-                <textarea class="" id="content" name="content" required></textarea>
+                <textarea class="" id="content" name="content" required>
+                <?php if(!empty($blog_details)){ ?><?=$blog_details['content']?><?php } ?>
+                </textarea>
 
 
             </div>
@@ -111,7 +114,7 @@
             <!-- Tags Input -->
             <div class="mb-3">
                 <label for="tags" class="form-label">Tags</label>
-                <input type="text" class="form-control" id="tags" name="tags" placeholder="Enter tags separated by commas">
+                <input type="text" class="form-control" id="tags" <?php if(!empty($blog_details)){ ?> value="<?=$blog_details['tags']?>" <?php }?> name="tags" placeholder="Enter tags separated by commas">
                 <small class="form-text text-muted">Separate tags with commas, e.g., programming, web development, design</small>
             </div>
 

@@ -274,4 +274,11 @@ class BlogModel extends CI_Model
 			$result= true;
 		}
 	}
+
+	public function get_blog_details($id)
+	{
+		$query = $this->db->get_where('blogs',array('id' => $id));
+        
+		return $query->result_array();
+	}
 }

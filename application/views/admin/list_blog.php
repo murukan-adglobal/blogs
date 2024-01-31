@@ -91,7 +91,7 @@
                     </select>
                     
                 </td>
-                <td><a href="<?php echo base_url().'blog/delete_blog?id='.$blog['id'] ?>" class="link mx-3">Delete</a></td>
+                <td><a href="<?php echo base_url().'admin/edit_blog?id='.$blog['id'] ?>" class="btn btn-outline-warning btn-sm mb-2 w-100">Edit</a><br><a href="<?php echo base_url().'blog/delete_blog?id='.$blog['id'] ?>" class="btn btn-outline-danger btn-sm w-100">Delete</a></td>
             </tr>
         <?php $i++ ; } ?>
            

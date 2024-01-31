@@ -55,6 +55,7 @@ $route['admin']='auth/index';
 $route['admin/create_blog']='blog/create_blog';
 $route['admin/dashboard']='auth/dashboard';
 $route['admin/signout']='auth/signout';
+$route['admin/edit_blog']='blog/edit_blog';
 $route['default_controller'] = 'blog';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
