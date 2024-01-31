@@ -86,7 +86,7 @@
                 <td>
                     <select class="status" blog_id="<?=$blog['id']?>">
                         
-                        <option <?php if($blog['poststatus']=='active'){ ?> selected <?php } ?> value="published">Active</option>
+                        <option <?php if($blog['poststatus']=='active'){ ?> selected <?php } ?> value="active">Active</option>
                         <option <?php if($blog['poststatus']=='inactive'){ ?> selected <?php } ?>  value="inactive">Inactive</option>
                     </select>
                     
